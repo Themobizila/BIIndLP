@@ -24,6 +24,9 @@
 </head>
 
 <body>
+  <!-- Âncora de topo absoluto -->
+  <div id="topo" aria-hidden="true"></div>
+
   <!-- Barra superior de progresso de leitura acelerada por GPU -->
   <div class="scroll-progress-track" aria-hidden="true">
     <div class="scroll-progress-bar" id="scroll-progress-bar"></div>
@@ -40,7 +43,7 @@
   <!-- Cabeçalho Executivo Fixo -->
   <header class="site-header" id="site-header">
     <div class="container header-inner">
-      <a href="#hero" class="brand-lockup" data-scroll-to="#hero" aria-label="Consisa BI Indústria - Voltar ao topo">
+      <a href="#topo" class="brand-lockup" data-scroll-to="#topo" aria-label="Consisa BI Indústria - Voltar ao topo">
         <span class="brand-mark" aria-hidden="true">
           <svg width="34" height="34" viewBox="0 0 34 34" fill="none">
             <rect width="34" height="34" rx="9" fill="#7471ef" />
@@ -77,6 +80,79 @@
   </header>
 
   <main id="main-content">
+    <!-- =====================================================================
+         BANNER INTERATIVO DE TOPO: EXPERIÊNCIA IMERSIVA NEON
+         (FADE IN, MOVIMENTO GUIADO PELO MOUSE, FADE OUT)
+         ===================================================================== -->
+    <section class="neon-scene scene" id="neon" data-steps="2.2" data-hide-pill>
+      <div class="neon-stage scene-sticky" id="neon-stage">
+        <div class="neon-backdrop" aria-hidden="true">
+          <div class="neon-grid"></div>
+          <div class="neon-orb neon-orb-a"></div>
+          <div class="neon-orb neon-orb-b"></div>
+          <div class="neon-spotlight"></div>
+        </div>
+
+        <div class="container neon-content">
+          <div class="neon-copy">
+            <span class="neon-kicker">EXPERIÊNCIA IMERSIVA</span>
+            <h2 class="neon-title">Mova o mouse e explore o Consisa BI por todos os ângulos.</h2>
+            <p class="neon-lead">Produção, estoque e análise livre reunidos em uma única visão.</p>
+          </div>
+
+          <div class="neon-perspective" id="neon-perspective">
+            <div class="neon-scene3d" id="neon-scene3d">
+              <figure class="neon-pane neon-pane-left neon-interactive" data-depth="0.55" data-neon-modal="estoque" tabindex="0" role="button" aria-label="Explorar telas do Módulo de Estoque">
+                <img src="./images/Painel Estoque.png" alt="Painel de Estoque" />
+                <div class="neon-pane-overlay">
+                  <span class="neon-zoom-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    Ver Telas de Estoque
+                  </span>
+                </div>
+                <figcaption><span>Estoque</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
+              </figure>
+
+              <figure class="neon-pane neon-pane-right neon-interactive" data-depth="0.55" data-neon-modal="csa" tabindex="0" role="button" aria-label="Explorar telas do Crie Sua Análise">
+                <img src="./images/Painel CSA_Prod.png" alt="Crie Sua Análise" />
+                <div class="neon-pane-overlay">
+                  <span class="neon-zoom-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    Ver Crie Sua Análise
+                  </span>
+                </div>
+                <figcaption><span>Crie Sua Análise</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
+              </figure>
+
+              <figure class="neon-pane neon-pane-center neon-interactive" data-depth="1" data-neon-modal="producao" tabindex="0" role="button" aria-label="Explorar telas do Módulo de Produção">
+                <img src="./images/Painel Prod.png" alt="Painel de Produção" />
+                <div class="neon-pane-overlay">
+                  <span class="neon-zoom-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    Ver Telas de Produção
+                  </span>
+                </div>
+                <figcaption><span>Produção</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
+              </figure>
+
+              <figure class="neon-phone neon-interactive" data-depth="1.7" data-neon-modal="mobile" tabindex="0" role="button" aria-label="Explorar telas do Consisa BI Mobile">
+                <img src="./images/Mobile Principal.png" alt="Consisa BI Mobile" />
+                <div class="neon-phone-overlay">
+                  <span class="neon-zoom-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                    Ver Telas Mobile
+                  </span>
+                </div>
+                <figcaption class="neon-phone-caption"><span>Mobile</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
+              </figure>
+            </div>
+          </div>
+
+          <div class="neon-hint" aria-hidden="true"><span class="neon-hint-dot"></span>Mova o mouse para mudar o ângulo · Clique em uma tela para ver todos os visuais</div>
+        </div>
+      </div>
+    </section>
+
     <!-- =====================================================================
          SEÇÃO 01: HERO CINEMATOGRÁFICO COM IMAGEM REAL HOME DO BI
          ===================================================================== -->
@@ -169,78 +245,6 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
          MARQUEE TICKER CINÉTICO (THE QREAM STYLE)
          ===================================================================== -->
     <div class="qream-ticker-section" aria-hidden="true">
@@ -273,7 +277,7 @@
           <span class="ticker-dot"></span>
           <span>CONSISA BI INDÚSTRIA</span>
         </div>
-        <!-- Duplicação para fluxo contínuo e contínuo -->
+        <!-- Duplicação para fluxo contínuo -->
         <div class="qream-ticker-item">
           <span class="ticker-dot"></span>
           <span>ENGENHARIA DE PRODUÇÃO</span>
@@ -402,78 +406,6 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
          SEÇÃO 03: PALCO FIXADO (PIN & SCRUB) — OS 2 MÓDULOS EM TELAS REAIS
          ===================================================================== -->
     <section class="modules-pinned-section scene" id="modulos" data-steps="3.6">
@@ -598,10 +530,9 @@
             </div>
           </div>
 
-          <!-- Coluna Direita: Moldura Executiva com as Imagens Reais do BI (Sem barras duplicadas) -->
+          <!-- Coluna Direita: Moldura Executiva com as Imagens Reais do BI -->
           <div class="modules-visual-col">
             <div class="bi-frame" id="bi-interactive-frame">
-              <!-- Barra de Janela Executiva Estilo Cockpit Moderno -->
               <div class="bi-frame-header">
                 <div class="bi-window-controls" aria-hidden="true">
                   <span class="window-dot dot-red"></span>
@@ -619,9 +550,7 @@
                 </div>
               </div>
 
-              <!-- Viewport das 4 Telas com Imagens Reais do BI (Limpas e sem sobreposição) -->
               <div class="bi-screens-viewport">
-
                 <!-- TELA 01: PAINEL PRODUÇÃO REAL -->
                 <div class="bi-screen is-active" data-screen="0">
                   <img src="./images/Painel Prod.png" alt="Painel Geral de Produção do Consisa BI"
@@ -645,7 +574,6 @@
                   <img src="./images/Tabela Estoque.png" alt="Tabela de Saldo e Cobertura de Estoque"
                     class="bi-screen-img" />
                 </div>
-
               </div>
             </div>
           </div>
@@ -655,79 +583,7 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
-         SEÇÃO 03: IMERSÃO EM CAMADAS DE INTELIGÊNCIA (SCROLLYTELLING SEQUENCIAL)
+         SEÇÃO 04: IMERSÃO EM CAMADAS DE INTELIGÊNCIA (SCROLLYTELLING SEQUENCIAL)
          ===================================================================== -->
     <section class="layers-scrolly-section scene" id="camadas" data-steps="2.7" data-hide-pill>
       <div class="layers-pinned-stage scene-sticky" id="layers-stage">
@@ -973,223 +829,7 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
-         EXPERIENCIA IMERSIVA NEON (FADE IN, MOVIMENTO GUIADO PELO MOUSE, FADE OUT)
-         ===================================================================== -->
-    <section class="neon-scene scene" id="neon" data-steps="2.2" data-hide-pill>
-      <div class="neon-stage scene-sticky" id="neon-stage">
-        <div class="neon-backdrop" aria-hidden="true">
-          <div class="neon-grid"></div>
-          <div class="neon-orb neon-orb-a"></div>
-          <div class="neon-orb neon-orb-b"></div>
-          <div class="neon-spotlight"></div>
-        </div>
-
-        <div class="container neon-content">
-          <div class="neon-copy">
-            <span class="neon-kicker">EXPERIÊNCIA IMERSIVA</span>
-            <h2 class="neon-title">Mova o mouse e explore o Consisa BI por todos os ângulos.</h2>
-            <p class="neon-lead">Produção, estoque e análise livre reunidos em uma única visão.</p>
-          </div>
-
-          <div class="neon-perspective" id="neon-perspective">
-            <div class="neon-scene3d" id="neon-scene3d">
-              <figure class="neon-pane neon-pane-left neon-interactive" data-depth="0.55" data-neon-modal="estoque" tabindex="0" role="button" aria-label="Explorar telas do Módulo de Estoque">
-                <img src="./images/Painel Estoque.png" alt="Painel de Estoque" />
-                <div class="neon-pane-overlay">
-                  <span class="neon-zoom-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    Ver Telas de Estoque
-                  </span>
-                </div>
-                <figcaption><span>Estoque</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
-              </figure>
-
-              <figure class="neon-pane neon-pane-right neon-interactive" data-depth="0.55" data-neon-modal="csa" tabindex="0" role="button" aria-label="Explorar telas do Crie Sua Análise">
-                <img src="./images/Painel CSA_Prod.png" alt="Crie Sua Análise" />
-                <div class="neon-pane-overlay">
-                  <span class="neon-zoom-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    Ver Crie Sua Análise
-                  </span>
-                </div>
-                <figcaption><span>Crie Sua Análise</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
-              </figure>
-
-              <figure class="neon-pane neon-pane-center neon-interactive" data-depth="1" data-neon-modal="producao" tabindex="0" role="button" aria-label="Explorar telas do Módulo de Produção">
-                <img src="./images/Painel Prod.png" alt="Painel de Produção" />
-                <div class="neon-pane-overlay">
-                  <span class="neon-zoom-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    Ver Telas de Produção
-                  </span>
-                </div>
-                <figcaption><span>Produção</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
-              </figure>
-
-              <figure class="neon-phone neon-interactive" data-depth="1.7" data-neon-modal="mobile" tabindex="0" role="button" aria-label="Explorar telas do Consisa BI Mobile">
-                <img src="./images/Mobile Principal.png" alt="Consisa BI Mobile" />
-                <div class="neon-phone-overlay">
-                  <span class="neon-zoom-badge">
-                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
-                    Ver Telas Mobile
-                  </span>
-                </div>
-                <figcaption class="neon-phone-caption"><span>Mobile</span><span class="neon-pane-sub">Clique para explorar</span></figcaption>
-              </figure>
-            </div>
-          </div>
-
-          <div class="neon-hint" aria-hidden="true"><span class="neon-hint-dot"></span>Mova o mouse para mudar o ângulo · Clique em uma tela para ver todos os visuais</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
-         SEÇÃO 03: TRILHA HORIZONTAL — NÍVEIS DE DECISÃO NA INDÚSTRIA
+         SEÇÃO 05: TRILHA HORIZONTAL — NÍVEIS DE DECISÃO NA INDÚSTRIA
          ===================================================================== -->
     <section class="horizontal-editorial-section scene-h" id="arquitetura" data-hide-pill>
       <div class="horizontal-pin-wrap scene-sticky" id="horizontal-pin-wrap">
@@ -1207,111 +847,111 @@
         <div class="container">
           <div class="h-viewport-box" id="h-viewport-box">
             <div class="horizontal-track" id="horizontal-track">
-          <!-- Card Horizontal 01: Nível Estratégico -->
-          <article class="h-card">
-            <div class="h-card-meta">
-              <span class="h-step-badge">NÍVEL 01 // ESTRATÉGICO</span>
-              <span class="h-persona">DIRETORIA &amp; ACIONISTAS</span>
-            </div>
-            <div class="h-big-metric">01</div>
-            <h3>Visão panorâmica para decisões em segundos.</h3>
-            <p>
-              No topo de cada módulo, indicadores vitais respondem instantaneamente se o volume fabril atingiu a meta,
-              qual o capital imobilizado hoje e quais setores exigem intervenção da alta gestão.
-            </p>
-            <div class="h-card-preview">
-              <img src="./images/Home.png" alt="Cards Executivos de Topo na Home" class="h-card-img" />
-            </div>
-            <div class="h-card-footer">
-              <span>Cockpit limpo sem ruído visual</span>
-              <span>Metas e faturamento consolidados</span>
-            </div>
-          </article>
+              <!-- Card Horizontal 01: Nível Estratégico -->
+              <article class="h-card">
+                <div class="h-card-meta">
+                  <span class="h-step-badge">NÍVEL 01 // ESTRATÉGICO</span>
+                  <span class="h-persona">DIRETORIA &amp; ACIONISTAS</span>
+                </div>
+                <div class="h-big-metric">01</div>
+                <h3>Visão panorâmica para decisões em segundos.</h3>
+                <p>
+                  No topo de cada módulo, indicadores vitais respondem instantaneamente se o volume fabril atingiu a meta,
+                  qual o capital imobilizado hoje e quais setores exigem intervenção da alta gestão.
+                </p>
+                <div class="h-card-preview">
+                  <img src="./images/Home.png" alt="Cards Executivos de Topo na Home" class="h-card-img" />
+                </div>
+                <div class="h-card-footer">
+                  <span>Cockpit limpo sem ruído visual</span>
+                  <span>Metas e faturamento consolidados</span>
+                </div>
+              </article>
 
-          <!-- Card Horizontal 02: Nível Gerencial -->
-          <article class="h-card">
-            <div class="h-card-meta">
-              <span class="h-step-badge">NÍVEL 02 // GERENCIAL</span>
-              <span class="h-persona">GERÊNCIA INDUSTRIAL &amp; PCP</span>
-            </div>
-            <div class="h-big-metric">02</div>
-            <h3>Identificação imediata de desvios e gargalos.</h3>
-            <p>
-              Gráficos de tendência contínua e rankings de famílias de produtos permitem identificar quais linhas de
-              manufatura estão sobrecarregadas ou com rendimento abaixo do planejado.
-            </p>
-            <div class="h-card-preview">
-              <img src="./images/Painel Prod.png" alt="Curvas de Tendência e Ranking de Produtos" class="h-card-img" />
-            </div>
-            <div class="h-card-footer">
-              <span>Alternância Ano / Mês / Data</span>
-              <span>Visão por Peso (kg), Unidades ou R$</span>
-            </div>
-          </article>
+              <!-- Card Horizontal 02: Nível Gerencial -->
+              <article class="h-card">
+                <div class="h-card-meta">
+                  <span class="h-step-badge">NÍVEL 02 // GERENCIAL</span>
+                  <span class="h-persona">GERÊNCIA INDUSTRIAL &amp; PCP</span>
+                </div>
+                <div class="h-big-metric">02</div>
+                <h3>Identificação imediata de desvios e gargalos.</h3>
+                <p>
+                  Gráficos de tendência contínua e rankings de famílias de produtos permitem identificar quais linhas de
+                  manufatura estão sobrecarregadas ou com rendimento abaixo do planejado.
+                </p>
+                <div class="h-card-preview">
+                  <img src="./images/Painel Prod.png" alt="Curvas de Tendência e Ranking de Produtos" class="h-card-img" />
+                </div>
+                <div class="h-card-footer">
+                  <span>Alternância Ano / Mês / Data</span>
+                  <span>Visão por Peso (kg), Unidades ou R$</span>
+                </div>
+              </article>
 
-          <!-- Card Horizontal 03: Nível Operacional -->
-          <article class="h-card">
-            <div class="h-card-meta">
-              <span class="h-step-badge">NÍVEL 03 // OPERACIONAL</span>
-              <span class="h-persona">SUPERVISÃO, QUALIDADE &amp; ALMOXARIFADO</span>
-            </div>
-            <div class="h-big-metric">03</div>
-            <h3>Rastreabilidade cirúrgica por ordem e lote.</h3>
-            <p>
-              Tabelas operacionais detalhadas permitem descer até o código exato da OP ou do SKU, verificando datas
-              previstas, consumo real de matérias-primas e saldos de inventário sem margem para dúvidas.
-            </p>
-            <div class="h-card-preview">
-              <img src="./images/Tabela Prod.png" alt="Tabela Detalhada de Ordens de Produção" class="h-card-img" />
-            </div>
-            <div class="h-card-footer">
-              <span>Transparência ordem a ordem</span>
-              <span>Eliminação de perdas invisíveis</span>
-            </div>
-          </article>
+              <!-- Card Horizontal 03: Nível Operacional -->
+              <article class="h-card">
+                <div class="h-card-meta">
+                  <span class="h-step-badge">NÍVEL 03 // OPERACIONAL</span>
+                  <span class="h-persona">SUPERVISÃO, QUALIDADE &amp; ALMOXARIFADO</span>
+                </div>
+                <div class="h-big-metric">03</div>
+                <h3>Rastreabilidade cirúrgica por ordem e lote.</h3>
+                <p>
+                  Tabelas operacionais detalhadas permitem descer até o código exato da OP ou do SKU, verificando datas
+                  previstas, consumo real de matérias-primas e saldos de inventário sem margem para dúvidas.
+                </p>
+                <div class="h-card-preview">
+                  <img src="./images/Tabela Prod.png" alt="Tabela Detalhada de Ordens de Produção" class="h-card-img" />
+                </div>
+                <div class="h-card-footer">
+                  <span>Transparência ordem a ordem</span>
+                  <span>Eliminação de perdas invisíveis</span>
+                </div>
+              </article>
 
-          <!-- Card Horizontal 04: Crie Sua Análise (Self-Service) -->
-          <article class="h-card h-card-featured">
-            <div class="h-card-meta">
-              <span class="h-step-badge">AUTONOMIA // SELF-SERVICE</span>
-              <span class="h-persona">MÓDULO CRIE SUA ANÁLISE</span>
-            </div>
-            <div class="h-big-metric">04</div>
-            <h3>Monte cruzamentos inéditos sem depender da TI.</h3>
-            <p>
-              Precisa cruzar a produção de um cliente específico por mês ou comparar o estoque por marca e filial
-              durante uma reunião estratégica? O módulo <strong>Crie Sua Análise</strong> permite escolher dimensões em
-              tempo real.
-            </p>
-            <div class="h-card-preview">
-              <img src="./images/Painel CSA_Prod.png" alt="Módulo Crie Sua Análise Produção" class="h-card-img" />
-            </div>
-            <div class="h-card-footer">
-              <span>Liberdade total para o gestor</span>
-              <span>Painel, Tabela e Matriz sob demanda</span>
-            </div>
-          </article>
+              <!-- Card Horizontal 04: Crie Sua Análise (Self-Service) -->
+              <article class="h-card h-card-featured">
+                <div class="h-card-meta">
+                  <span class="h-step-badge">AUTONOMIA // SELF-SERVICE</span>
+                  <span class="h-persona">MÓDULO CRIE SUA ANÁLISE</span>
+                </div>
+                <div class="h-big-metric">04</div>
+                <h3>Monte cruzamentos inéditos sem depender da TI.</h3>
+                <p>
+                  Precisa cruzar a produção de um cliente específico por mês ou comparar o estoque por marca e filial
+                  durante uma reunião estratégica? O módulo <strong>Crie Sua Análise</strong> permite escolher dimensões em
+                  tempo real.
+                </p>
+                <div class="h-card-preview">
+                  <img src="./images/Painel CSA_Prod.png" alt="Módulo Crie Sua Análise Produção" class="h-card-img" />
+                </div>
+                <div class="h-card-footer">
+                  <span>Liberdade total para o gestor</span>
+                  <span>Painel, Tabela e Matriz sob demanda</span>
+                </div>
+              </article>
 
-          <!-- Card Horizontal 05: Confiabilidade & Governança -->
-          <article class="h-card">
-            <div class="h-card-meta">
-              <span class="h-step-badge">CONFIABILIDADE // GOVERNANÇA</span>
-              <span class="h-persona">DIRETORIA &amp; CONTROLADORIA</span>
-            </div>
-            <div class="h-big-metric">05</div>
-            <h3>Uma única versão oficial e segura dos fatos.</h3>
-            <p>
-              Toda a equipe gerencial e a diretoria compartilham a mesma verdade sobre a indústria. Controle rigoroso de
-              permissões por usuário para que cada setor veja exatamente o que tem autorização para consultar.
-            </p>
-            <div class="h-card-preview">
-              <img src="./images/Painel Estoque.png" alt="Painel Integrado de Estoque" class="h-card-img" />
-            </div>
-            <div class="h-card-footer">
-              <span>Perfis de acesso por usuário</span>
-              <span>Informações protegidas e auditadas</span>
-            </div>
-          </article>
+              <!-- Card Horizontal 05: Confiabilidade & Governança -->
+              <article class="h-card">
+                <div class="h-card-meta">
+                  <span class="h-step-badge">CONFIABILIDADE // GOVERNANÇA</span>
+                  <span class="h-persona">DIRETORIA &amp; CONTROLADORIA</span>
+                </div>
+                <div class="h-big-metric">05</div>
+                <h3>Uma única versão oficial e segura dos fatos.</h3>
+                <p>
+                  Toda a equipe gerencial e a diretoria compartilham a mesma verdade sobre a indústria. Controle rigoroso de
+                  permissões por usuário para que cada setor veja exatamente o que tem autorização para consultar.
+                </p>
+                <div class="h-card-preview">
+                  <img src="./images/Painel Estoque.png" alt="Painel Integrado de Estoque" class="h-card-img" />
+                </div>
+                <div class="h-card-footer">
+                  <span>Perfis de acesso por usuário</span>
+                  <span>Informações protegidas e auditadas</span>
+                </div>
+              </article>
             </div>
           </div>
           <div class="h-progress" aria-hidden="true"><span class="h-progress-fill" id="h-progress-fill"></span></div>
@@ -1320,79 +960,7 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
-         SEÇÃO 05: PALCO FIXADO MOBILE COM IMAGENS REAIS DO SMARTPHONE
+         SEÇÃO 06: PALCO FIXADO MOBILE COM IMAGENS REAIS DO SMARTPHONE
          ===================================================================== -->
     <section class="mobile-pinned-section scene" id="mobile-showcase" data-steps="2.7" data-hide-pill>
       <div class="mobile-pinned-stage scene-sticky" id="mobile-stage">
@@ -1407,7 +975,7 @@
             </h2>
             <p class="mobile-lead">
               Desenvolvido com arquitetura dedicada para smartphones, o <strong>Consisa BI Mobile</strong> acompanha o
-              diretor em viagens e o gerente industrial no chao de fábrica com leitura limpa e zero truncamento.
+              diretor em viagens e o gerente industrial no chão de fábrica com leitura limpa e zero truncamento.
             </p>
 
             <div class="mobile-steps-nav" role="tablist" aria-label="Estados da versão mobile">
@@ -1498,79 +1066,7 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
-         SEÇÃO 05: IMPACTO PRÁTICO NA ROTINA FABRIL & COMPARATIVO
+         SEÇÃO 07: IMPACTO PRÁTICO NA ROTINA FABRIL & COMPARATIVO
          ===================================================================== -->
     <section class="roi-section" id="resultados">
       <div class="container">
@@ -1705,79 +1201,7 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
-         ===================================================================== -->
-    <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
-      <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
-      <div class="neon-modal-dialog" data-lenis-prevent>
-        <header class="neon-modal-header">
-          <div class="neon-modal-title-group">
-            <span class="neon-modal-badge" id="neon-modal-badge">MÓDULO DE PRODUÇÃO</span>
-            <h3 class="neon-modal-title" id="neon-modal-title">Visões de Produção em Detalhe</h3>
-            <p class="neon-modal-summary" id="neon-modal-summary">Acompanhe do apontamento fabril ao fechamento com clareza total.</p>
-          </div>
-          <button type="button" class="neon-modal-close" id="neon-modal-close" aria-label="Fechar galeria">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-            <span>Fechar [Esc]</span>
-          </button>
-        </header>
-
-        <!-- Seletor de Telas Relacionadas (Tabs) -->
-        <div class="neon-modal-tabs-wrapper">
-          <div class="neon-modal-tabs" id="neon-modal-tabs" role="tablist">
-            <!-- Tabs dinâmicas injetadas via JavaScript -->
-          </div>
-        </div>
-
-        <!-- Palco do Visual Ativo com Moldura e Descrição -->
-        <div class="neon-modal-stage">
-          <button type="button" class="neon-modal-nav neon-modal-prev" id="neon-modal-prev" aria-label="Visual anterior">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
-          </button>
-
-          <div class="neon-modal-viewport">
-            <div class="neon-modal-bezel" id="neon-modal-bezel">
-              <div class="neon-modal-bezel-bar">
-                <div class="bezel-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-                <div class="neon-modal-screen-tag" id="neon-modal-screen-tag">Painel Executivo</div>
-                <div class="neon-modal-counter" id="neon-modal-counter">1 de 3</div>
-              </div>
-              <div class="neon-modal-screen-frame" id="neon-modal-screen-frame">
-                <img id="neon-modal-img" src="./images/Painel Prod.png" alt="Visual do Consisa BI" class="neon-modal-img" />
-              </div>
-            </div>
-
-            <!-- Card com Descrição Executiva e Destaques da Tela -->
-            <div class="neon-modal-caption" id="neon-modal-caption">
-              <div class="neon-modal-caption-content">
-                <h4 id="neon-modal-caption-title">Painel Geral de Produção</h4>
-                <p id="neon-modal-caption-text">Visão sintética para o gerente industrial acompanhar o atingimento de metas, ordens concluídas e pontualidade da entrega em tempo real.</p>
-              </div>
-              <div class="neon-modal-caption-meta" id="neon-modal-caption-meta">
-                <!-- Badges / destaques injetados via JavaScript -->
-              </div>
-            </div>
-          </div>
-
-          <button type="button" class="neon-modal-nav neon-modal-next" id="neon-modal-next" aria-label="Próximo visual">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
-          </button>
-        </div>
-
-        <footer class="neon-modal-footer">
-          <div class="neon-modal-keys-hint">
-            <span>Dica: Use as setas <strong>←</strong> e <strong>→</strong> do teclado para alternar telas e <strong>Esc</strong> para fechar.</span>
-          </div>
-          <div class="neon-modal-dots" id="neon-modal-dots">
-            <!-- Pontos indicadores injetados via JavaScript -->
-          </div>
-        </footer>
-      </div>
-    </div>
-
-
-    <!-- =====================================================================
-         SEÇÃO 06: FECHAMENTO COMERCIAL & DIRECIONAMENTO AO MARKETING
+         SEÇÃO 08: FECHAMENTO COMERCIAL & DIRECIONAMENTO AO MARKETING
          ===================================================================== -->
     <section class="cta-closing-section" id="contato">
       <div class="container">
@@ -1866,7 +1290,7 @@
     </section>
 
     <!-- =====================================================================
-         MODAL / LIGHTBOX DE TELAS RELACIONADAS (ZOOM E EXPLORAÇÃO NEON)
+         MODAL / LIGHTBOX DE TELAS RELACIONADAS (INSTÂNCIA ÚNICA LIMPA)
          ===================================================================== -->
     <div id="neon-modal" class="neon-modal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="neon-modal-title" data-lenis-prevent>
       <div class="neon-modal-backdrop" id="neon-modal-backdrop"></div>
@@ -1987,7 +1411,7 @@
 
     <div class="container footer-bottom">
       <span>Consisa Sistemas — Unidade de Business Intelligence Industrial.</span>
-      <a href="#hero" class="back-to-top" data-scroll-to="#hero">Voltar ao topo ↑</a>
+      <a href="#topo" class="back-to-top" data-scroll-to="#topo">Voltar ao topo ↑</a>
     </div>
   </footer>
 
@@ -2016,6 +1440,58 @@
       </button>
     </div>
   </aside>
+
+  <!-- Adaptação para o Banner Neon no Topo (preserva Fade In inicial, 3D ativo no scroll 0 e Fade Out ao rolar) -->
+  <script>
+    (function () {
+      const neonEl = document.getElementById('neon');
+      if (!neonEl) return;
+
+      const nativeGBCR = neonEl.getBoundingClientRect.bind(neonEl);
+      let introProgress = 0;
+      const startTime = performance.now();
+      const introDuration = 850;
+
+      function easeOutCubic(x) {
+        return 1 - Math.pow(1 - x, 3);
+      }
+
+      neonEl.getBoundingClientRect = function () {
+        const r = nativeGBCR();
+        const range = r.height - window.innerHeight;
+        if (range <= 0 || !document.documentElement.classList.contains('scenes-on')) {
+          return r;
+        }
+        const rawP = Math.min(1, Math.max(0, -r.top / range));
+        if (rawP >= 1 || r.top > 0) {
+          return r;
+        }
+        const mappedP = introProgress * (0.22 + rawP * 0.78);
+        const syntheticTop = -mappedP * range;
+        return {
+          top: syntheticTop,
+          bottom: r.bottom,
+          left: r.left,
+          right: r.right,
+          width: r.width,
+          height: r.height,
+          x: r.x,
+          y: syntheticTop
+        };
+      };
+
+      function animateBannerIntro(now) {
+        const t = Math.min(1, (now - startTime) / introDuration);
+        introProgress = easeOutCubic(t);
+        window.dispatchEvent(new Event('scroll'));
+        if (t < 1) {
+          requestAnimationFrame(animateBannerIntro);
+        }
+      }
+
+      requestAnimationFrame(animateBannerIntro);
+    })();
+  </script>
 
   <!-- Scripts Locais: GSAP + ScrollTrigger + Lenis + Motor da Aplicação -->
   <script src="./vendor/gsap.min.js"></script>
